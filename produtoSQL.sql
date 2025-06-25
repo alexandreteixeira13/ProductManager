@@ -19,4 +19,6 @@ Quantidade smallint not null
 
 select * from Usuarios;
 
+SELECT * FROM Usuarios WHERE email;
+
 insert into Usuarios (Nome, Email, Senha) values ("Haise", "Haiseroxo@gmail.com", "coruja123");	

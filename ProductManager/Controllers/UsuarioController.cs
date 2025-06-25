@@ -27,7 +27,7 @@ namespace ProductManager.Controllers
 
             if (usuario != null && usuario.Senha == senha)
             {
-                return RedirectToAction("Produto", "Index");
+                return RedirectToAction("Index", "Produto");
             }
 
             ModelState.AddModelError("", "Email ou senha inválidos");
