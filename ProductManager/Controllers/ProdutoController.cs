@@ -1,4 +1,5 @@
 ﻿using Microsoft.AspNetCore.Mvc;
+using ProductManager.Models;
 using ProductManager.Repositorio;
 
 namespace ProductManager.Controllers
@@ -17,12 +18,24 @@ namespace ProductManager.Controllers
 
         public IActionResult Index()
         {
-            return View(_produtoRepositorio.TodosProdutos);
+            return View(_produtoRepositorio.TodosProdutos());
         }
 
         public IActionResult CadastrarProduto()
         {
             return View();
+        }
+
+        [HttpPost]
+
+        public IActionResult CadastrarProduto(Produto produto)
+        {
+            if (ModelState.IsValid)
+            {
+                _produtoRepositorio.AdicionarProduto(produto);
+                return RedirectToAction("CadastrarProduto");
+            }
+            return View(produto);
         }
     }
 }

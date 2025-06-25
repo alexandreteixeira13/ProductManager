@@ -22,6 +22,8 @@ namespace ProductManager.Repositorio
                 cmd.Parameters.AddWithValue("@Descricao", produto.descricao);
                 cmd.Parameters.AddWithValue("@Preco", produto.preco);
                 cmd.Parameters.AddWithValue("@Quantidade", produto.quantidade);
+                cmd.ExecuteNonQuery();
+                conexao.Close();
             }
         }
 
@@ -59,7 +61,7 @@ namespace ProductManager.Repositorio
                                     Nome = ((string)dr["Nome"]), // Converte o valor da coluna "nome" para string
                                     preco = Convert.ToInt32(dr["Preco"]),
                                     quantidade = Convert.ToInt32(dr["Quantidade"]),// Converte o valor da coluna "telefone" para string
-                                    descricao = ((string)dr["Email"]), // Converte o valor da coluna "email" para string
+                                    descricao = ((string)dr["Descricao"]), // Converte o valor da coluna "email" para string
                                 });
                 }
                 // Retorna a lista de todos os produtos

@@ -18,7 +18,10 @@ Quantidade smallint not null
 );
 
 select * from Usuarios;
+select * from Produtos;
 
 SELECT * FROM Usuarios WHERE email;
 
 insert into Usuarios (Nome, Email, Senha) values ("Haise", "Haiseroxo@gmail.com", "coruja123");	
+
+insert into Produtos(Nome, Descricao, Preco, Quantidade) values ("QuintinoVerme", "Verme imundo", "144", 1);
