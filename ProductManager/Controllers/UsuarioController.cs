@@ -8,7 +8,7 @@ namespace ProductManager.Controllers
     {
 
         private readonly UsuarioRepositorio _usuarioRepositorio;
-        
+
 
         public UsuarioController(UsuarioRepositorio usuarioRepositorio)
         {
@@ -27,7 +27,7 @@ namespace ProductManager.Controllers
 
             if (usuario != null && usuario.Senha == senha)
             {
-                return RedirectToAction("Usuario", "Usuario");
+                return RedirectToAction("Produto", "Index");
             }
 
             ModelState.AddModelError("", "Email ou senha inválidos");

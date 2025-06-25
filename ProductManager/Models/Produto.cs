@@ -13,5 +13,7 @@
 
         public int quantidade { get; set; }
 
-    }
+        public List<Produto>? produtos { get; set;}
+
+    }   
 }

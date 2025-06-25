@@ -17,4 +17,6 @@ Preco smallint not null,
 Quantidade smallint not null
 );
 
-			
+select * from Usuarios;
+
+insert into Usuarios (Nome, Email, Senha) values ("Haise", "Haiseroxo@gmail.com", "coruja123");	

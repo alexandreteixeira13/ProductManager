@@ -16,7 +16,7 @@ namespace ProductManager.Repositorio
 
                 conexao.Open();
 
-                MySqlCommand cmd = new("SELECT * FROM Usuarios WHERE = @email", conexao);
+                MySqlCommand cmd = new("SELECT * FROM Usuarios WHERE =@email", conexao);
 
                 cmd.Parameters.Add("@email", MySqlDbType.VarChar).Value = email;
 
@@ -34,9 +34,8 @@ namespace ProductManager.Repositorio
                             Email = dr["Email"].ToString(),
                             Senha = dr["Senha"].ToString()
                         };
-
-                        return usuario;
                     }
+                    return usuario;
                 }
             }
         }
